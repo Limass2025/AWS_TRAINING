@@ -27,6 +27,7 @@ This section focuses on creating a custom policy and assigning it directly to an
 * **Action:** Log in to your AWS Management Console. Use the search bar to locate and navigate to the Identity and Access Management (IAM) service.
 
 ![alt text](<Screenshot 2025-08-01 053451.png>)
+
 ![alt text](<Screenshot 2025-08-02 143308.png>)
 
 ### Step 2: Initiate Policy Creation
