@@ -101,6 +101,9 @@ Hard-coding values or relying on `export` can be inefficient. A better approach 
       * You can easily change the environment by changing the argument: `./aws_cloud_manager.sh production`
 
     ![alt text](<WhatsApp Image 2025-08-10 at 01.37.29_b05f2647.jpg>)
+    ![alt text](<WhatsApp Image 2025-08-10 at 02.28.00_794e5132.jpg>)
+
+    ![alt text](<WhatsApp Image 2025-08-10 at 02.28.13_619775b5.jpg>)
 
 -----
 
