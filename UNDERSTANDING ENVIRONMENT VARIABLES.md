@@ -104,7 +104,32 @@ Hard-coding values or relying on `export` can be inefficient. A better approach 
     ![alt text](<WhatsApp Image 2025-08-10 at 02.28.00_794e5132.jpg>)
 
     ![alt text](<WhatsApp Image 2025-08-10 at 02.28.13_619775b5.jpg>)
+ 1.  Implement Enhanced Error Handling
+Your script has basic error handling for argument count, but it can be more robust.
 
+Validate the value of $1: Your script should not only check if an argument exists but also if it's a valid environment type. The case statement in the example above handles this perfectly by only executing logic for "testing," "production," and "local," and exiting with an error for any other input.
+
+Use set -e: Add set -e at the top of your script. This is a best practice that ensures the script will exit immediately if any command fails. This prevents the script from continuing with potentially corrupted data or in an incomplete state.
+
+Redirect Errors: Use >&2 to send error messages to stderr. This separates standard output (e.g., success messages) from error messages, which is useful for logging and automated processing.
+
+2. Implement Logging
+Logging is crucial for real-world scripts to audit actions and troubleshoot issues.
+
+Add timestamps to your output: Use echo "$(date): Message" to prepend a timestamp to your log messages. This makes it easy to track when events occurred.
+
+Capture Output to a Log File: For more advanced logging, you can redirect all output to a log file. For example, you can run your script like this: ./aws_cloud_manager.sh testing > script.log 2>&1. This sends all output (stdout and stderr) to a file named script.log. This allows you to review the script's execution history at a later time.
+
+![alt text](<WhatsApp Image 2025-08-12 at 20.26.41_39a2a414.jpg>)
+
+![alt text](<WhatsApp Image 2025-08-12 at 20.26.41_7ec65575.jpg>)
+
+![alt text](<WhatsApp Image 2025-08-12 at 20.26.40_fcf163de.jpg>)
+
+![alt text](<WhatsApp Image 2025-08-12 at 20.26.40_468f1f69.jpg>)
+
+
+![alt text](<WhatsApp Image 2025-08-12 at 20.26.40_a67cd01b.jpg>)
 -----
 
 ### Project Summary
